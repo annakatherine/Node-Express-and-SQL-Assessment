@@ -1,0 +1,32 @@
+
+CREATE TABLE animals (
+	id SERIAL PRIMARY KEY NOT NULL,
+	type VARCHAR(20) UNIQUE,
+	quantity NUMERIC
+);
+
+INSERT INTO animals (type, quantity) VALUES ('zebra', 5);
+
+x  Create a Node/Express server app.
+x  This app should actively listen for requests on port 3000.
+x  It should be able to serve back our static files (index.html, any js or css files)
+x  as well as handle incoming requests to any routes.
+x  Include a routing module to use with your Ajax requests.
+
+x  Our application needs to be able to input new animals
+x  and display current animals.
+x  This will require Ajax requests to send data to the server
+x  and Ajax requests to retrieve data from the server.
+
+x  When a new kind of animal is entered from the user, use the randomNumber function below to get a number between 1 and 100.
+Use this number as your number of animals value in the database for this entry.
+
+Random number function: function randomNumber(min, max){ return Math.floor(Math.random() * (1 + max - min) + min); }
+This function could be wrapped in a custom module (hint hint).
+
+// Tried to make this into a module and require it in app.js but couldn't figure out how to do this in app.js so
+didn't wrap into a custom module. Just created it as function in client side and called it.
+
+
+x  The app should display all animals listed in our database when it loads
+!!! and after each animal group is added.
